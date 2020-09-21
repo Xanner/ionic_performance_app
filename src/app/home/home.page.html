@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar position="top">
+    <ion-title>Test wydajności aplikacji Ionic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-virtual-scroll [items]="items">
+    <div *virtualItem="let item">
+      <ion-row>
+        <ion-col>
+          <ion-img 
+          [src]="item.imgSrc" 
+          [alt]="item.name">
+        </ion-img>
+        </ion-col>
+        <ion-col>
+          <h3>
+            {{ item.name }}
+          </h3>
+          <div>
+            {{ item.content }}
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-virtual-scroll>
+</ion-content>
+
